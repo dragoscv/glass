@@ -1,0 +1,26 @@
+packages:
+  - 'packages/*'
+
+# Enable peer dependency warnings
+prefer-workspace-packages: true
+
+# Use strict peer dependencies
+auto-install-peers: false
+
+# Hoist common dependencies
+hoist-pattern: ['*']
+
+# Don't hoist these packages
+public-hoist-pattern: ['*eslint*', '*prettier*', '*typescript*']
+
+# Enable build cache
+enable-pre-post-scripts: true
+
+# Registry configuration
+registry: 'https://registry.npmjs.org/'
+
+# Resolution strategy
+resolution-mode: 'highest'
+
+# Node modules structure
+node-linker: 'isolated'

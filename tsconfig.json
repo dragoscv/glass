@@ -1,0 +1,87 @@
+{
+  "compilerOptions": {
+    // Language and Environment
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM"],
+    "moduleResolution": "bundler",
+    "allowJs": false,
+    "checkJs": false,
+
+    // Emit
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "removeComments": false,
+    "noEmit": false,
+    "importHelpers": true,
+    "downlevelIteration": true,
+
+    // Interop Constraints
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Type Checking - Strict Mode
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+
+    // Additional Type Checking
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+
+    // Module Resolution
+    "baseUrl": "./",
+    "paths": {
+      "@glassmcp/server": ["./packages/server/src"],
+      "@glassmcp/server/*": ["./packages/server/src/*"],
+      "@glassmcp/sdk": ["./packages/sdk/src"],
+      "@glassmcp/sdk/*": ["./packages/sdk/src/*"],
+      "@glassmcp/cli": ["./packages/cli/src"],
+      "@glassmcp/cli/*": ["./packages/cli/src/*"],
+      "@glassmcp/shared": ["./packages/shared/src"],
+      "@glassmcp/shared/*": ["./packages/shared/src/*"]
+    },
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": false,
+
+    // Advanced
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "packages/*/src/**/*",
+    "packages/*/tests/**/*",
+    "packages/*/*.ts",
+    "types/**/*"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+    "**/coverage",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ],
+  "references": [
+    { "path": "./packages/shared" },
+    { "path": "./packages/server" },
+    { "path": "./packages/sdk" },
+    { "path": "./packages/cli" }
+  ]
+}
