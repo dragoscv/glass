@@ -39,7 +39,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@codai/glass-shared": "workspace:*",
+    "@codai/glass-mcp": "workspace:*",
     "express": "^4.18.2",
     "ws": "^8.16.0",
     "helmet": "^7.1.0",
@@ -68,9 +68,13 @@
     "typescript": "^5.3.3",
     "vitest": "^1.2.1",
     "@vitest/coverage-v8": "^1.2.1"
-  },
-  "engines": {
+  },  "engines": {
     "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dragoscv/glass.git",
+    "directory": "packages/server"
   },
   "os": [
     "win32"

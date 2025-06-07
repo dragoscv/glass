@@ -32,15 +32,14 @@
     "typescript",
     "command-line"
   ],
-  "author": "GlassMCP Team",
-  "license": "MIT",
+  "author": "GlassMCP Team",  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/glassmcp/glass.git",
+    "url": "https://github.com/dragoscv/glass.git",
     "directory": "packages/cli"
   },
   "dependencies": {
-    "@codai/glass-shared": "workspace:*",
+    "@codai/glass-mcp": "workspace:*",
     "@codai/glass-sdk": "workspace:*",
     "commander": "^11.1.0",
     "inquirer": "^9.2.12",

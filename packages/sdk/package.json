@@ -36,14 +36,13 @@
     "client"
   ],
   "author": "GlassMCP Team",
-  "license": "MIT",
-  "repository": {
+  "license": "MIT",  "repository": {
     "type": "git",
-    "url": "https://github.com/glassmcp/glass.git",
+    "url": "https://github.com/dragoscv/glass.git",
     "directory": "packages/sdk"
   },
   "dependencies": {
-    "@codai/glass-shared": "workspace:*",
+    "@codai/glass-mcp": "workspace:*",
     "axios": "^1.6.2",
     "ws": "^8.14.2",
     "eventemitter3": "^5.0.1"
