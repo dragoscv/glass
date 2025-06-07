@@ -1,5 +1,5 @@
 {
-  "name": "@glassmcp/workspace",
+  "name": "@codai/glass-workspace",
   "version": "1.0.0",
   "private": true,
   "description": "GlassMCP - Machine Control Protocol Server for Windows",

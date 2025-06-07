@@ -1,6 +1,6 @@
 {
-  "name": "@glassmcp/server",
-  "version": "1.0.0",
+  "name": "@codai/glass-server",
+  "version": "2.0.0",
   "description": "GlassMCP server - Machine Control Protocol for Windows",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -39,7 +39,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@glassmcp/shared": "workspace:*",
+    "@codai/glass-shared": "workspace:*",
     "express": "^4.18.2",
     "ws": "^8.16.0",
     "helmet": "^7.1.0",

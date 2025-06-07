@@ -1,6 +1,6 @@
 {
-  "name": "@glassmcp/shared",
-  "version": "1.0.0",
+  "name": "@codai/glass-shared",
+  "version": "2.0.0",
   "description": "Shared types and utilities for GlassMCP",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
