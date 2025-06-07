@@ -65,19 +65,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": [
-    "packages/*/src/**/*",
-    "packages/*/tests/**/*",
-    "packages/*/*.ts",
-    "types/**/*"
-  ],
-  "exclude": [
-    "**/node_modules",
-    "**/dist",
-    "**/coverage",
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ],
+  "include": ["packages/*/src/**/*", "packages/*/tests/**/*", "packages/*/*.ts", "types/**/*"],
+  "exclude": ["**/node_modules", "**/dist", "**/coverage", "**/*.spec.ts", "**/*.test.ts"],
   "references": [
     { "path": "./packages/shared" },
     { "path": "./packages/server" },

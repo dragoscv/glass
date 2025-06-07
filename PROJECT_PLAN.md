@@ -2,7 +2,10 @@
 
 ## 🎯 Project Overview
 
-**GlassMCP** is a Machine Control Protocol server for Windows that enables AI agents to control system-level operations similar to how Playwright controls browsers. This tool will be used by GitHub Copilot Chat extension in VS Code to issue system-level automation commands.
+**GlassMCP** is a Machine Control Protocol server for Windows that enables AI
+agents to control system-level operations similar to how Playwright controls
+browsers. This tool will be used by GitHub Copilot Chat extension in VS Code to
+issue system-level automation commands.
 
 ## 📋 Project Specifications
 
@@ -71,14 +74,17 @@ glass/
 ### 1. Control Modules
 
 #### Window Management
+
 - `window.focus({ title: string })` - Focus window by title
 - `window.list()` - List all windows
 - `window.minimize({ title: string })` - Minimize window
 - `window.maximize({ title: string })` - Maximize window
 - `window.close({ title: string })` - Close window
-- `window.resize({ title: string, width: number, height: number })` - Resize window
+- `window.resize({ title: string, width: number, height: number })` - Resize
+  window
 
 #### Keyboard Control
+
 - `keyboard.type({ text: string })` - Type text
 - `keyboard.press({ key: string })` - Press single key
 - `keyboard.shortcut({ keys: string[] })` - Key combinations
@@ -86,27 +92,36 @@ glass/
 - `keyboard.release({ key: string })` - Release held key
 
 #### Mouse Control
+
 - `mouse.move({ x: number, y: number })` - Move cursor
-- `mouse.click({ x?: number, y?: number, button?: 'left' | 'right' | 'middle' })` - Click
+- `mouse.click({ x?: number, y?: number, button?: 'left' | 'right' | 'middle' })` -
+  Click
 - `mouse.doubleClick({ x?: number, y?: number })` - Double click
-- `mouse.drag({ from: {x: number, y: number}, to: {x: number, y: number} })` - Drag
-- `mouse.scroll({ x?: number, y?: number, direction: 'up' | 'down' | 'left' | 'right', amount: number })` - Scroll
+- `mouse.drag({ from: {x: number, y: number}, to: {x: number, y: number} })` -
+  Drag
+- `mouse.scroll({ x?: number, y?: number, direction: 'up' | 'down' | 'left' | 'right', amount: number })` -
+  Scroll
 
 #### System Control
-- `system.exec({ command: string, args?: string[], cwd?: string })` - Execute command
-- `system.shell({ command: string, shell?: 'cmd' | 'powershell' })` - Run shell command
+
+- `system.exec({ command: string, args?: string[], cwd?: string })` - Execute
+  command
+- `system.shell({ command: string, shell?: 'cmd' | 'powershell' })` - Run shell
+  command
 - `system.process.list()` - List running processes
 - `system.process.kill({ pid: number | name: string })` - Kill process
 - `system.service.start({ name: string })` - Start Windows service
 - `system.service.stop({ name: string })` - Stop Windows service
 
 #### Clipboard Operations
+
 - `clipboard.get()` - Get clipboard content
 - `clipboard.set({ text: string })` - Set clipboard text
 - `clipboard.setImage({ path: string })` - Set clipboard image
 - `clipboard.clear()` - Clear clipboard
 
 #### File System Operations
+
 - `filesystem.read({ path: string })` - Read file
 - `filesystem.write({ path: string, content: string })` - Write file
 - `filesystem.exists({ path: string })` - Check if file exists
@@ -138,6 +153,7 @@ glass/
 ## 🛠️ Technical Stack
 
 ### Core Technologies
+
 - **Language**: TypeScript (strict mode)
 - **Runtime**: Node.js 18+
 - **Package Manager**: pnpm
@@ -146,12 +162,14 @@ glass/
 - **Documentation**: OpenAPI 3.0
 
 ### Windows Integration
+
 - **Primary**: node-ffi-napi for Windows API calls
 - **Secondary**: PowerShell subprocess execution
 - **Tertiary**: AutoHotkey scripts for complex input
 - **Fallback**: NirCmd for various system operations
 
 ### Development Tools
+
 - **Linting**: ESLint with TypeScript rules
 - **Formatting**: Prettier
 - **Git Hooks**: Husky with commitlint
@@ -161,6 +179,7 @@ glass/
 ## 📦 Package Configuration
 
 ### Dependencies
+
 ```json
 {
   "dependencies": {
@@ -198,6 +217,7 @@ glass/
 ## 🚀 Implementation Phases
 
 ### Phase 1: Project Setup (Week 1)
+
 - [x] Initialize pnpm workspace
 - [x] Configure TypeScript with strict settings
 - [x] Set up ESLint, Prettier, Husky
@@ -205,6 +225,7 @@ glass/
 - [x] Set up Vitest testing framework
 
 ### Phase 2: Core Architecture (Week 2)
+
 - [ ] Implement plugin system architecture
 - [ ] Create base server with Fastify
 - [ ] Set up authentication system
@@ -212,6 +233,7 @@ glass/
 - [ ] Create basic WebSocket support
 
 ### Phase 3: Windows Integration (Week 3)
+
 - [ ] Set up node-ffi-napi for Windows APIs
 - [ ] Create PowerShell integration layer
 - [ ] Implement AutoHotkey script execution
@@ -219,6 +241,7 @@ glass/
 - [ ] Create Windows API type definitions
 
 ### Phase 4: Control Modules (Week 4-5)
+
 - [ ] Implement window management
 - [ ] Add keyboard control
 - [ ] Create mouse control
@@ -227,6 +250,7 @@ glass/
 - [ ] Implement file system operations
 
 ### Phase 5: CLI and Testing (Week 6)
+
 - [ ] Create CLI tool with commands
 - [ ] Implement playground mode
 - [ ] Add comprehensive unit tests
@@ -234,6 +258,7 @@ glass/
 - [ ] Set up E2E testing
 
 ### Phase 6: SDK and Documentation (Week 7)
+
 - [ ] Generate client SDK
 - [ ] Create comprehensive documentation
 - [ ] Add usage examples
@@ -241,6 +266,7 @@ glass/
 - [ ] Create integration guides
 
 ### Phase 7: Publishing and CI/CD (Week 8)
+
 - [ ] Set up GitHub Actions
 - [ ] Configure NPM publishing
 - [ ] Add automated testing
@@ -250,6 +276,7 @@ glass/
 ## 🧪 Testing Strategy
 
 ### Unit Tests
+
 - All control modules
 - Authentication system
 - API endpoints
@@ -257,6 +284,7 @@ glass/
 - Validation logic
 
 ### Integration Tests
+
 - Full API workflows
 - Plugin system integration
 - Windows API integration
@@ -264,6 +292,7 @@ glass/
 - File system operations
 
 ### E2E Tests
+
 - CLI functionality
 - Complete user workflows
 - Error scenarios
@@ -271,6 +300,7 @@ glass/
 - Security testing
 
 ### Test Coverage Goals
+
 - **Unit Tests**: 90% coverage
 - **Integration Tests**: 80% coverage
 - **E2E Tests**: Critical paths covered
@@ -279,24 +309,28 @@ glass/
 ## 🔒 Security Considerations
 
 ### Authentication
+
 - Local token file with secure generation
 - Token rotation capabilities
 - Request signature validation
 - Rate limiting per token
 
 ### Input Validation
+
 - Zod schemas for all inputs
 - Path traversal prevention
 - Command injection prevention
 - SQL injection prevention (if applicable)
 
 ### System Access
+
 - Configurable file system restrictions
 - Process execution sandboxing
 - Network access limitations
 - Registry access controls
 
 ### Audit and Logging
+
 - All commands logged with timestamps
 - User agent and source tracking
 - Failed authentication attempts
@@ -305,18 +339,21 @@ glass/
 ## 📊 Performance Requirements
 
 ### Response Times
+
 - **Simple Commands**: < 100ms
 - **Complex Commands**: < 500ms
 - **File Operations**: < 1s
 - **System Commands**: < 2s
 
 ### Resource Usage
+
 - **Memory**: < 100MB idle, < 500MB active
 - **CPU**: < 5% idle, < 25% active
 - **Disk**: Minimal temporary files
 - **Network**: Local only, no external calls
 
 ### Scalability
+
 - Support for 10+ concurrent connections
 - Queue system for command execution
 - Graceful degradation under load
@@ -325,12 +362,14 @@ glass/
 ## 🌟 Future Enhancements
 
 ### Cross-Platform Support
+
 - macOS implementation
 - Linux implementation
 - Unified API across platforms
 - Platform-specific optimizations
 
 ### Advanced Features
+
 - Screen capture and OCR
 - Image recognition and clicking
 - Advanced window management
@@ -338,6 +377,7 @@ glass/
 - Plugin marketplace
 
 ### Integration Improvements
+
 - Visual Studio Code extension
 - GitHub Actions integration
 - Docker containerization
@@ -346,24 +386,28 @@ glass/
 ## 📈 Success Metrics
 
 ### Functionality
+
 - All core commands implemented and tested
 - 99.9% API uptime
 - < 0.1% error rate
 - Full TypeScript type coverage
 
 ### Usability
+
 - Complete documentation
 - Working examples
 - CLI playground functional
 - SDK generated and tested
 
 ### Security
+
 - No security vulnerabilities
 - Proper authentication
 - Audit logging functional
 - Rate limiting effective
 
 ### Performance
+
 - All response time targets met
 - Resource usage within limits
 - Stress testing passed
@@ -379,4 +423,5 @@ The project will be designed specifically for GitHub Copilot Chat integration:
 4. **Rich Feedback**: Detailed responses for AI context
 5. **Example Integrations**: Pre-built Copilot workflows
 
-This comprehensive plan ensures GlassMCP will be a robust, secure, and extensible system control platform for AI agents.
+This comprehensive plan ensures GlassMCP will be a robust, secure, and
+extensible system control platform for AI agents.

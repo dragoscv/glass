@@ -49,7 +49,8 @@
     "figlet": "^1.7.0",
     "boxen": "^7.1.1",
     "conf": "^12.0.0"
-  },  "devDependencies": {
+  },
+  "devDependencies": {
     "@types/figlet": "^1.5.8",
     "@types/inquirer": "^9.0.7",
     "@types/node": "^20.11.5",
