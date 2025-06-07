@@ -1,6 +1,6 @@
 {
   "name": "@codai/glass-cli",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Command-line interface for GlassMCP - Machine Control Protocol CLI tool",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -32,7 +32,8 @@
     "typescript",
     "command-line"
   ],
-  "author": "GlassMCP Team",  "license": "MIT",
+  "author": "GlassMCP Team",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/dragoscv/glass.git",

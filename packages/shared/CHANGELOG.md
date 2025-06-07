@@ -1,5 +1,11 @@
 # @codai/glass-shared
 
+## 3.0.0
+
+### Major Changes
+
+- Initial
+
 ## 2.0.0
 
 ### Major Changes

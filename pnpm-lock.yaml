@@ -68,12 +68,12 @@ importers:
 
   packages/cli:
     dependencies:
-      '@glassmcp/sdk':
-        specifier: workspace:*
-        version: link:../sdk
-      '@glassmcp/shared':
+      '@codai/glass-mcp':
         specifier: workspace:*
         version: link:../shared
+      '@codai/glass-sdk':
+        specifier: workspace:*
+        version: link:../sdk
       boxen:
         specifier: ^7.1.1
         version: 7.1.1
@@ -123,7 +123,7 @@ importers:
 
   packages/sdk:
     dependencies:
-      '@glassmcp/shared':
+      '@codai/glass-mcp':
         specifier: workspace:*
         version: link:../shared
       axios:
@@ -157,7 +157,7 @@ importers:
 
   packages/server:
     dependencies:
-      '@glassmcp/shared':
+      '@codai/glass-mcp':
         specifier: workspace:*
         version: link:../shared
       chalk:

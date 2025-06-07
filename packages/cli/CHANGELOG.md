@@ -1,5 +1,17 @@
 # @codai/glass-cli
 
+## 3.0.0
+
+### Major Changes
+
+- Initial
+
+### Patch Changes
+
+- Updated dependencies
+  - @codai/glass-sdk@3.0.0
+  - @codai/glass-mcp@3.0.0
+
 ## 2.0.0
 
 ### Major Changes
